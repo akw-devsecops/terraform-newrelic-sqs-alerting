@@ -11,6 +11,12 @@ variable "queue_arn" {
   description = "Arn of the queue to be monitored"
 }
 
+variable "create_dlq_alert" {
+  type        = bool
+  description = "Create an alert for the dead-letter-queue"
+  default     = false
+}
+
 variable "queue_arn_dead_letter" {
   type        = string
   description = "Arn of the dead-letter-queue to be monitored"

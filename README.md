@@ -34,7 +34,8 @@ No modules.
 | <a name="input_env"></a> [env](#input\_env) | n/a | `string` | n/a | yes |
 | <a name="input_google_chat_url"></a> [google\_chat\_url](#input\_google\_chat\_url) | URL of your google chat space | `string` | n/a | yes |
 | <a name="input_queue_arn"></a> [queue\_arn](#input\_queue\_arn) | Arn of the queue to be monitored | `string` | n/a | yes |
-| <a name="input_google_chat_notification_triggers"></a> [google\_chat\_notification\_triggers](#input\_google\_chat\_notification\_triggers) | The issue events to notify on for google chat notifications. Valid values are ACTIVATED, ACKNOWLEDGED, PRIORITY\_CHANGED, CLOSED or OTHER\_UPDATES | `list(string)` | <pre>[<br>  "ACTIVATED",<br>  "ACKNOWLEDGED",<br>  "PRIORITY_CHANGED",<br>  "CLOSED",<br>  "OTHER_UPDATES"<br>]</pre> | no |
+| <a name="input_create_dlq_alert"></a> [create\_dlq\_alert](#input\_create\_dlq\_alert) | Create an alert for the dead-letter-queue | `bool` | `false` | no |
+| <a name="input_google_chat_notification_triggers"></a> [google\_chat\_notification\_triggers](#input\_google\_chat\_notification\_triggers) | The issue events to notify on for google chat notifications. Valid values are ACTIVATED, ACKNOWLEDGED, PRIORITY\_CHANGED, CLOSED or OTHER\_UPDATES | `list(string)` | <pre>[<br/>  "ACTIVATED",<br/>  "ACKNOWLEDGED",<br/>  "PRIORITY_CHANGED",<br/>  "CLOSED",<br/>  "OTHER_UPDATES"<br/>]</pre> | no |
 | <a name="input_queue_arn_dead_letter"></a> [queue\_arn\_dead\_letter](#input\_queue\_arn\_dead\_letter) | Arn of the dead-letter-queue to be monitored | `string` | `""` | no |
 
 ## Outputs

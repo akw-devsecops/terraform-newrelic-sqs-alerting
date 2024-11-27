@@ -26,7 +26,8 @@ resource "newrelic_nrql_alert_condition" "approximated_age_of_messages" {
 }
 
 resource "newrelic_nrql_alert_condition" "messages_in_dlq" {
-  count     = var.queue_arn_dead_letter != "" ? 1 : 0
+  count = var.create_dlq_alert ? 1 : 0
+
   policy_id = newrelic_alert_policy.this.id
   type      = "static"
   name      = "message-in-dlq-${var.env}"
