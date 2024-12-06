@@ -39,7 +39,7 @@ resource "newrelic_nrql_alert_condition" "messages_in_dlq" {
   fill_value  = 0
 
   nrql {
-    query = "SELECT max(aws.sqs.NumberOfMessagesReceived) FROM Metric WHERE aws.sqs.queueArn = '${var.queue_arn_dead_letter}'"
+    query = "SELECT sum(aws.sqs.NumberOfMessagesReceived) FROM Metric WHERE aws.sqs.queueArn = '${var.queue_arn_dead_letter}'"
   }
 
   warning {
